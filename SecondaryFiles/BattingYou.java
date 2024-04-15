@@ -4,14 +4,14 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BattingYou {
-    static int totalRuns;
+    private int totalRuns;
     public BattingYou(){
-        BattingYou.totalRuns = 0;
+        this.totalRuns = 0;
     }
     public int getTotalRuns(){
         return totalRuns;
     }
-    public static void start(){
+    public void start(){
         Random ran = new Random();
         Scanner in = new Scanner(System.in);
         boolean gameOver = false;
@@ -38,7 +38,7 @@ public class BattingYou {
         }
     }
 
-    public static void start(int otherRuns){
+    public void start(int otherRuns){
         Random ran = new Random();
         Scanner in = new Scanner(System.in);
         boolean gameOver = false;

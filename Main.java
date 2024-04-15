@@ -24,11 +24,11 @@ public class Main {
             int toDo = in.nextInt();
             if(toDo == 0){
                 BattingYou a2 = new BattingYou();
-                BattingYou.start();
+                a2.start();
                 int yoursRuns = a2.getTotalRuns();
                 System.out.println("Now AI Batting start");
                 BattingAI a1 = new BattingAI();
-                BattingAI.start(yoursRuns);
+                a1.start(yoursRuns);
                 int aiRuns = a1.getTotalRuns();
                 if (yoursRuns > aiRuns){
                     System.out.println("YOU WON THE GAME");
@@ -41,11 +41,10 @@ public class Main {
             }
             if(toDo == 1){
                 BattingAI a1 = new BattingAI();
-                BattingAI.start();
+                a1.start();
                 int aiRuns = a1.getTotalRuns();
-
                 BattingYou a2 = new BattingYou();
-                BattingYou.start(aiRuns);
+                a2.start(aiRuns);
                 int yoursRuns = a2.getTotalRuns();
                 if (yoursRuns > aiRuns){
                     System.out.println("YOU WON THE GAME");
@@ -67,11 +66,11 @@ public class Main {
             if(result1 == 0){
                 System.out.println("AI won the toss he decided to 'BAT' first");
                 BattingAI a1 = new BattingAI();
-                BattingAI.start();
+                a1.start();
                 int aiRuns = a1.getTotalRuns();
 
                 BattingYou a2 = new BattingYou();
-                BattingYou.start(aiRuns);
+                a2.start(aiRuns);
                 int yoursRuns = a2.getTotalRuns();
                 if (yoursRuns > aiRuns){
                     System.out.println("YOU WON THE GAME");
@@ -83,12 +82,12 @@ public class Main {
                 }
             }else{
                 System.out.println("AI won the toss he decided to 'BOWL' first");
-                BattingYou a2 = new BattingYou();
-                BattingYou.start();
-                int yoursRuns = a2.getTotalRuns();
+                BattingYou a3 = new BattingYou();
+                a3.start();
+                int yoursRuns = a3.getTotalRuns();
                 System.out.println("Now AI Batting start");
                 BattingAI a1 = new BattingAI();
-                BattingAI.start(yoursRuns);
+                a1.start(yoursRuns);
                 int aiRuns = a1.getTotalRuns();
                 if (yoursRuns > aiRuns){
                     System.out.println("YOU WON THE GAME");
