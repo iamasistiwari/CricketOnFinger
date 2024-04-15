@@ -3,10 +3,10 @@ package CricketOnFinger.SecondaryFiles;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Bowling {
-    private static int totalRuns;
-    public Bowling(){
-        Batting.totalRuns = 0;
+public class BattingYou {
+    static int totalRuns;
+    public BattingYou(){
+        BattingYou.totalRuns = 0;
     }
     public static void start(){
         Random ran = new Random();
@@ -14,11 +14,11 @@ public class Bowling {
         boolean gameOver = false;
         while(!gameOver){
             System.out.println("\t\t Your total runs = "+totalRuns);
-            System.out.println("Enter your runs : ");
+            System.out.println("Enter your shot : ");
             int playerRun = in.nextInt();
             if(playerRun < 7){
                 int aiBowl = ran.nextInt(7);
-                System.out.println("Ai bowl : "+aiBowl);
+                System.out.println("AI bowl : "+aiBowl);
                 if(aiBowl == playerRun){
                     System.out.println();
                     System.out.println("\t\t\t\t\t\t AI BOWLED YOU GAME-OVER !!" );
@@ -30,7 +30,7 @@ public class Bowling {
                     System.out.println();
                 }
             }else{
-                System.out.println("Invalid runs");
+                System.out.println("Invalid shot");
             }
         }
 
