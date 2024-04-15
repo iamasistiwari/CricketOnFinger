@@ -23,10 +23,38 @@ public class Main {
             System.out.println("You want the toss press |'0' Batting | |'1' Bowling | = ");
             int toDo = in.nextInt();
             if(toDo == 0){
+                BattingYou a2 = new BattingYou();
                 BattingYou.start();
+                int yoursRuns = a2.getTotalRuns();
+                System.out.println("Now AI Batting start");
+                BattingAI a1 = new BattingAI();
+                BattingAI.start(yoursRuns);
+                int aiRuns = a1.getTotalRuns();
+                if (yoursRuns > aiRuns){
+                    System.out.println("YOU WON THE GAME");
+                }
+                if(yoursRuns < aiRuns){
+                    System.out.println("AI WON THE GAME");
+                }else {
+                    System.out.println("Match is Tie");
+                }
             }
             if(toDo == 1){
+                BattingAI a1 = new BattingAI();
                 BattingAI.start();
+                int aiRuns = a1.getTotalRuns();
+
+                BattingYou a2 = new BattingYou();
+                BattingYou.start(aiRuns);
+                int yoursRuns = a2.getTotalRuns();
+                if (yoursRuns > aiRuns){
+                    System.out.println("YOU WON THE GAME");
+                }
+                if(yoursRuns < aiRuns){
+                    System.out.println("AI WON THE GAME");
+                }else {
+                    System.out.println("Match is Tie");
+                }
             }
             else{
                 System.out.println("Invalid Choose");
@@ -38,10 +66,38 @@ public class Main {
             int result1 = (random == 0) ? q1 : q2;
             if(result1 == 0){
                 System.out.println("AI won the toss he decided to 'BAT' first");
+                BattingAI a1 = new BattingAI();
                 BattingAI.start();
+                int aiRuns = a1.getTotalRuns();
+
+                BattingYou a2 = new BattingYou();
+                BattingYou.start(aiRuns);
+                int yoursRuns = a2.getTotalRuns();
+                if (yoursRuns > aiRuns){
+                    System.out.println("YOU WON THE GAME");
+                }
+                if(yoursRuns < aiRuns){
+                    System.out.println("AI WON THE GAME");
+                }else {
+                    System.out.println("Match is Tie");
+                }
             }else{
                 System.out.println("AI won the toss he decided to 'BOWL' first");
+                BattingYou a2 = new BattingYou();
                 BattingYou.start();
+                int yoursRuns = a2.getTotalRuns();
+                System.out.println("Now AI Batting start");
+                BattingAI a1 = new BattingAI();
+                BattingAI.start(yoursRuns);
+                int aiRuns = a1.getTotalRuns();
+                if (yoursRuns > aiRuns){
+                    System.out.println("YOU WON THE GAME");
+                }
+                if(yoursRuns < aiRuns){
+                    System.out.println("AI WON THE GAME");
+                }else {
+                    System.out.println("Match is Tie");
+                }
             }
         }
     }
