@@ -4,13 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class BattingYou {
-    private int totalRuns;
+    public int totalRuns;
     public BattingYou(){
         this.totalRuns = 0;
     }
-    public int getTotalRuns(){
-        return totalRuns;
-    }
+
     public void start(){
         Random ran = new Random();
         Scanner in = new Scanner(System.in);
@@ -49,10 +47,10 @@ public class BattingYou {
             if(playerRun < 7){
                 int aiBowl = ran.nextInt(7);
                 System.out.println("AI bowl : "+aiBowl);
-                if (otherRuns > totalRuns){
+                if (otherRuns < totalRuns){
                     break;
                 }
-                if(aiBowl == playerRun){
+                else if(aiBowl == playerRun){
                     System.out.println();
                     System.out.println("\t\t\t\t\t\t AI BOWLED YOU GAME-OVER !!" );
                     System.out.println("Your final score is : "+totalRuns);
